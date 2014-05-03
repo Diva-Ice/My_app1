@@ -1,0 +1,26 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: postgres
+  password: 'postgres'
+  pool: 100
+  timeout: 10000
+
+development:
+  <<: *default
+  database: ausosedi_development
+
+test:
+  <<: *default
+  database: ausosedi_test
+
+production:
+  <<: *default
+  database: ausosedi_production
+  port: 5432
+
+staging:
+  <<: *default
+  database: ausosedi_development
+  port: 5455

@@ -1,0 +1,46 @@
+div
+  .large-9.medium-8.columns.text-left
+    h1 Что это?
+    h3.subheader
+      | Auto Service Desc - это сервис для управления автосервисом.
+  .large-3.medium-2.columns
+    h1
+      = link_to "Регистрация", new_user_registration_path, class: "button [radius round]" unless current_user
+      |    
+    
+      = link_to "Вход", new_user_session_path, class: "button [radius round]" unless current_user
+
+
+hr
+h3 Скриншоты
+ul.small-block-grid-3
+  li
+    =image_tag "/image/satelite.jpg", class: "th"
+  li
+    =image_tag "/image/spacewalk.jpg", class: "th"
+  li
+    =image_tag "/image/games.jpg", class: "th"
+hr
+.row
+  .medium-3.small-6.columns
+    h5 Преимущества
+    .text-left
+      ul
+        li
+          | Работа через интеренет
+        li
+          | Документооборот, настроенный специально для автосервисов
+        li
+          | Удобное администрирование
+        li
+          | Графики и отчетность
+
+
+
+  .medium-3.small-6.columns
+    h5 Помощь
+
+  .medium-3.small-6.columns
+    h5 Преимущества
+
+
